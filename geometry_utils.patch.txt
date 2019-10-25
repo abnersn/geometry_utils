@@ -1,0 +1,51 @@
+diff --git a/package.xml b/package.xml
+index 74c6160..60ecefa 100644
+--- a/package.xml
++++ b/package.xml
+@@ -14,6 +14,8 @@
+ 
+   <build_depend>geometry_msgs</build_depend>
+   <build_depend>tf2</build_depend>
++  <build_depend>roscpp</build_depend>
+ 
+   <run_depend>tf2</run_depend>
++  <run_depend>roscpp</run_depend>
+ </package>
+diff --git a/tests/test_base.cc b/tests/test_base.cc
+index 05adf4e..cdaae98 100644
+--- a/tests/test_base.cc
++++ b/tests/test_base.cc
+@@ -1,8 +1,8 @@
+ #define BOOST_TEST_DYN_LINK
+ #define BOOST_TEST_MODULE test_base
+ #include <boost/test/unit_test.hpp>
++#include <stdio.h>
+ 
+-#include <ros/ros.h>
+ #include <geometry_utils/GeometryUtils.h>
+ 
+ namespace gu = geometry_utils;
+diff --git a/tests/test_math.cc b/tests/test_math.cc
+index f4b1181..e457125 100644
+--- a/tests/test_math.cc
++++ b/tests/test_math.cc
+@@ -2,7 +2,6 @@
+ #define BOOST_TEST_MODULE test_math
+ #include <boost/test/unit_test.hpp>
+ 
+-#include <ros/ros.h>
+ #include <geometry_utils/GeometryUtilsMath.h>
+ 
+ namespace gu = geometry_utils;
+diff --git a/tests/test_so3error.cc b/tests/test_so3error.cc
+index 2eaed84..bd585ac 100644
+--- a/tests/test_so3error.cc
++++ b/tests/test_so3error.cc
+@@ -2,7 +2,6 @@
+ #define BOOST_TEST_MODULE test_equals
+ #include <boost/test/unit_test.hpp>
+ 
+-#include <ros/ros.h>
+ #include <geometry_utils/GeometryUtils.h>
+ 
+ namespace gu = geometry_utils;
